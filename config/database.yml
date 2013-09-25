@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: ez-pet-sitting_production
+  database: sitting_production
   pool: 5
-  username: ez-pet-sitting
+  username: ubuntu 
   password:
