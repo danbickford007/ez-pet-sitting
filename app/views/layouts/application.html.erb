@@ -1,0 +1,132 @@
+<!DOCTYPE html >
+<!--  Website template by freewebsitetemplates.com  -->
+<html>
+
+<head>
+  <title>EzPetSitting</title>
+  <meta  charset=iso-8859-1" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!--[if IE 6]>
+    <link href="css/ie6.css" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if IE 7]>
+        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
+  <![endif]-->
+</head>
+
+<body>
+
+    
+      <div id="header">
+                <a href="index.html" id="logo"><%= image_tag("logo.gif", :width=>"310", :height=>"114", :alt=>"", :title=>"") %></a>
+          <ul class="navigation">
+            <li class="<%= params[:action] == 'index' ? 'active' : ''%>"><a href="/">Home</a></li>
+            <li class="<%= params[:action] == 'services' ? 'active' : ''%>"><%= link_to 'Services', pages_services_path%></li>
+            <li class="<%= params[:action] == 'about' ? 'active' : ''%>"><%= link_to 'About', pages_about_path%></li>
+            <li class="<%= params[:action] == 'blog' ? 'active' : ''%>"><%= link_to 'Blog', pages_blog_path%></li>
+            <li class="<%= params[:action] == 'reviews' ? 'active' : ''%>"><%= link_to 'Reviews', pages_reviews_path%></li>
+            <li class="<%= params[:action] == 'contact' ? 'active' : ''%>"><%= link_to 'Contact Me', pages_contact_path%></li>
+          </ul>
+      </div>
+      
+      <div id="body">
+      
+          <div class="banner">&nbsp;</div>
+          
+             <div id="content">
+           
+               <div class="content">
+                 <%= yield %>
+            </div>
+            
+              <div id="sidebar">
+                <div class="search">
+                  <input type="text" name="s" value="Find"><button>&nbsp;</button>
+                  <label for="articles"><input type="radio" id="articles">Here</label>
+                  <label for="products"><input type="radio" id="products" checked>Google</label>
+                </div>
+                
+                                <div class="section">                 
+                  <ul class="navigation">
+                    <li class="active"><a href="index.html">Available Services</a></li>
+                    <li><a href="index.html">Specials</a></li>
+                  </ul>
+                  
+                  <div class="aside">
+                   <div>
+                    <div>
+                       <ul>
+                        <li><a href="index.html">Express Care</a> <a class="more" href="index.html">see all</a></li>
+                        <li><a href="index.html">Hour Care Session</a> <a class="more" href="index.html">see all</a></li>
+                        <li><a href="index.html">Extended Walk</a> <a class="more" href="index.html">see all</a></li>
+                        <li><a href="index.html">Large Animal</a> <a class="more" href="index.html">see all</a></li>
+                        <li><a href="index.html">Washing</a> <a class="more" href="index.html">see all</a></li>
+                        <li><a href="index.html">Overnight Care</a> <a class="more" href="index.html">see all</a></li>
+                       </ul>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+                
+              </div>
+           </div>
+           
+           <div class="featured">
+                <ul>
+              <li><a href="index.html"><img src="images/organic-and-chemical-free.jpg" width="300" height="90" alt="Pet Shop" title="Pet Shop" ></a></li>
+              <li><a href="index.html"><img src="images/good-food.jpg" width="300" height="90" alt="Pet Shop" title="Pet Shop" ></a></li>
+              <li class="last"><a href="index.html"><img src="images/pet-grooming.jpg" width="300" height="90" alt="Pet Shop" title="Pet Shop" ></a></li>
+            </ul>
+                
+           </div>
+          
+      
+      </div>
+      
+      <div id="footer">
+              <div class="section">
+            <ul>
+              <li>
+                <img src="images/friendly-pets.jpg" width="240" height="186" alt="Pet Shop" title="Pet Shop">
+                <h2><a href="index.html">Friendly Pets</a></h2>
+                <p>
+                   Lorem ipsum dolor sit amet, consectetuer adepiscing elit,  sed diam nonummy nib. <a class="more" href="index.html">Read More</a> 
+                </p>
+              </li> 
+              <li>
+                <img src="images/pet-lover2.jpg" width="240" height="186" alt="Pet Shop" title="Pet Shop">
+                <h2><a href="index.html">How dangerous are they</a></h2>
+                <p>
+                   Lorem ipsum dolor sit amet, cons ectetuer adepis cing, sed diam euis. <a class="more" href="index.html">Read More</a> 
+                </p>
+              </li> 
+              <li>
+                <img src="images/healthy-dog.jpg" width="240" height="186" alt="Pet Shop" title="Pet Shop">
+                <h2><a href="index.html">Keep them healthy</a></h2>
+                <p>
+                   Lorem ipsum dolor sit amet, consectetuer adepiscing elit,  sed diam nonu mmy. <a class="more" href="index.html">Read More</a> 
+                </p>
+              </li> 
+              <li>
+                
+                <h2><a href="index.html">Love...love...love...pets</a></h2>
+                <p>
+                     Lorem ipsum dolor sit amet, consectetuer adepiscing elit,  sed diameusim. <a class="more" href="index.html">Read More</a> 
+                </p>
+                <img src="images/pet-lover.jpg" width="240" height="186" alt="Pet Shop" title="Pet Shop">
+              </li> 
+            </ul>
+          </div>
+          <div id="footnote">
+            <div class="section">
+               &copy; 2011 <a href="index.html">Petshop</a>. All Rights Reserved.
+            </div>
+          </div>
+      </div>
+      
+  
+</body>
+</html>
